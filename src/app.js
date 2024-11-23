@@ -16,13 +16,10 @@ function generate_random_card() {
   lower_symbol.innerHTML = chosen_suit;
   number.innerHTML = chosen_number;
 
-  if (chosen_suit == "♦" || chosen_suit == "♥") {
-    upper_symbol.style.color = "red";
-    lower_symbol.style.color = "red";
-  } else {
-    upper_symbol.style.color = "black";
-    lower_symbol.style.color = "black";
-  }
+  upper_symbol.style.color =
+    chosen_suit === "♦" || chosen_suit === "♥" ? "red" : "black";
+  lower_symbol.style.color =
+    chosen_suit === "♦" || chosen_suit === "♥" ? "red" : "black";
 }
 
 window.onload = function() {
